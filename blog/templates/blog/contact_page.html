@@ -8,9 +8,6 @@
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
     </head>
     <body>
-    <div>
-        
-    </div> 
         <nav>
             <ul>
                 <li><a href="/#">Home</a></li>
@@ -19,22 +16,29 @@
                 <li><a href="/#">About</a></li>
                 {% if user.is_authenticated %}
                 <div class="topright">
-                   <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
-                    <a href="{% url 'post_draft_list' %}" class="top-menu"><span class="glyphicon glyphicon-edit"></span></a>
+                <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon  glyphicon-plus"></span></a>
+                <a href="{% url 'post_draft_list' %}" class="top-menu"><span class="    glyphicon glyphicon-edit"></span></a>
                 </div>
                 {% endif %}
             </ul>
         </nav>
+            
         <div class="page-header">
             <h1><a href="/">Raul Eulogio's Website</a></h1>
         </div>
-        <div class="content container">
-            <div class="row">
-                <div class="col-md-8">
-                {% block content %}
-                {% endblock %}
-                </div>
-            </div>
+        <div class="static_content">
+            <h2 align="center">If you're interested in contacting me do so here:</h2>
+                <ul>
+                    <li>
+                        rauleulogio3@gmail.com  
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/raul-eulogio-217069123/">LinkedIn Profile</a>  
+                    </li>
+                    <li>
+                        <a href="https://github.com/raviolli77">GitHub Profile</a>
+                    </li>
+                </ul>
         </div>
 </body>
 </html>
