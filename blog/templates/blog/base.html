@@ -8,13 +8,11 @@
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
     </head>
     <body>
-    <div>
-        
-    </div> 
+        <!-- Navigation Bar -->
         <nav>
             <ul>
-                <li><a href="/#">Home</a></li>
-                <li><a href="/#">Projects</a></li>
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="{% url 'post_list' %}">Blog</a></li>
                 <li><a href="{% url 'contact_page' %}">Contact</a></li>
                 <li><a href="/#">About</a></li>
                 {% if user.is_authenticated %}
@@ -36,5 +34,14 @@
                 </div>
             </div>
         </div>
+
 </body>
+<div class="ftr">
+    <footer>
+        <p align="center">Posted by: Raul Eulogio</p>
+        <p align="center"><a href="https://github.com/raviolli77"><img src="https://raw.githubusercontent.com/raviolli77/raulSite/master/assets/icons/github_icon.png" width="25">
+        <a href=""></a></p>
+    </footer>
+</div>
+        
 </html>
