@@ -17,8 +17,6 @@ def post_list(request):
     return render(request, 'blog/post_list.html', {'posts': posts})
 
 def post_detail(request, pk):
-    if not request.user.is_staff:
-        raise Http404
     post = get_object_or_404(Post, pk=pk)
     return render(request, 'blog/post_detail.html', {'post': post})
 
@@ -76,8 +74,5 @@ def post_remove(request, pk):
     post.delete()
     return redirect('post_list')
     
-def contact_page(request):
-   return render(request, "blog/contact_page.html", {})
-
 def index(request):
    return render(request, "blog/index.html", {})
