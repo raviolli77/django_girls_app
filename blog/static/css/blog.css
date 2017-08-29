@@ -37,8 +37,7 @@ p {
 .static_content p, .static_content ul {
     font-size: 200%;
     font-family: 'Lobster', cursive;
-    display:table; margin:4 auto;
-
+    /*display:table; margin:4 auto; */
 }
 
 .static_content h2:first-child {
